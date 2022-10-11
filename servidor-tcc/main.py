@@ -1,7 +1,7 @@
 from unicodedata import name
 import pandas as pd
 df = pd.read_csv("AEP_hourly.csv", parse_dates=[0])
-df.head()
+# df.head()
 
 df['hour'] = df['Datetime'].dt.hour
 df['day'] = df['Datetime'].dt.day
@@ -25,4 +25,4 @@ print(df.at["AEP_MW"])
    # print(i)
 # print(df.grupo.unique())
 # print(df.grupo.min())
-# df[['hour','day','month','weekday','year','grupo']].to_csv( "file.csv",index=False )
+df[['hour','day','month','weekday','year','grupo']].to_csv( "file.csv",index=False )

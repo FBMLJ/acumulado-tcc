@@ -1,14 +1,17 @@
 #include<stdio.h>
 #include"util.h"
 #include<stdlib.h>
+#define PATH_OUTPUT "output/cenario_5.csv"
+#define PATH_MEMORY "memory/cenario_5.csv"
+
 
 int main(){
     
     ATRIBUTO** atributos =  criar_instancia_de_atributos();
     ARVORE* arv = criar_arvore(atributos);
-    FILE  *f = fopen("input/file_7_atr.csv","r");
-    FILE *f1 = fopen("output/output.csv","w");
-    FILE *f2 = fopen("output/memory_output.csv", "w");
+    FILE  *f = fopen("input/cenario_5.csv","r");
+    FILE *f1 = fopen(PATH_OUTPUT,"w");
+    FILE *f2 = fopen(PATH_MEMORY, "w");
     printf("%d", NUMERO_ATRIBUTO);
     
     int *dados = (int*)malloc(sizeof(int)*( NUMERO_ATRIBUTO+1));

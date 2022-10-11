@@ -44,22 +44,38 @@ ATRIBUTO** criar_instancia_de_atributos(){
     for (int i =0;i < 14;i++) vetor4[i] = 2004+i;
     vetor[4]->vetor = vetor4;
 
-    // vetor[5]->numero_de_valor_distinto = NUM_LABEL;
-    // int* vetor5 =(int*) malloc(sizeof(int)*NUM_LABEL);
-    // for (int i =0;i < NUM_LABEL;i++) vetor5[i] = i;
-    // vetor[5]->vetor = vetor5;
+    vetor[5]->numero_de_valor_distinto = NUM_LABEL;
+    int* vetor5 =(int*) malloc(sizeof(int)*NUM_LABEL);
+    for (int i =0;i < NUM_LABEL;i++) vetor5[i] = i;
+    vetor[5]->vetor = vetor5;
 
     
-    // vetor[6]->numero_de_valor_distinto = NUM_LABEL;
-    // int* vetor6 =(int*) malloc(sizeof(int)*NUM_LABEL);
-    // for (int i =0;i < NUM_LABEL;i++) vetor6[i] = i;
-    // vetor[6]->vetor = vetor6;
+    vetor[6]->numero_de_valor_distinto = NUM_LABEL;
+    int* vetor6 =(int*) malloc(sizeof(int)*NUM_LABEL);
+    for (int i =0;i < NUM_LABEL;i++) vetor6[i] = i;
+    vetor[6]->vetor = vetor6;
 
     
-    // vetor[7]->numero_de_valor_distinto = NUM_LABEL;
-    // int* vetor7 =(int*) malloc(sizeof(int)*NUM_LABEL);
-    // for (int i =0;i < NUM_LABEL;i++) vetor7[i] = i;
-    // vetor[7]->vetor = vetor7;
+    vetor[7]->numero_de_valor_distinto = NUM_LABEL;
+    int* vetor7 =(int*) malloc(sizeof(int)*NUM_LABEL);
+    for (int i =0;i < NUM_LABEL;i++) vetor7[i] = i;
+    vetor[7]->vetor = vetor7;
+
+     vetor[8]->numero_de_valor_distinto = NUM_LABEL;
+    int* vetor8 =(int*) malloc(sizeof(int)*NUM_LABEL);
+    for (int i =0;i < NUM_LABEL;i++) vetor8[i] = i;
+    vetor[8]->vetor = vetor8;
+
+    vetor[9]->numero_de_valor_distinto = NUM_LABEL;
+    int* vetor9 =(int*) malloc(sizeof(int)*NUM_LABEL);
+    for (int i =0;i < NUM_LABEL;i++) vetor9[i] = i;
+    vetor[9]->vetor = vetor9;
+
+    vetor[10]->numero_de_valor_distinto = NUM_LABEL;
+    int* vetor10 =(int*) malloc(sizeof(int)*NUM_LABEL);
+    for (int i =0;i < NUM_LABEL;i++) vetor10[i] = i;
+    vetor[10]->vetor = vetor10;
+
 
 
    
@@ -171,17 +187,17 @@ void adiciona_na_arvore(int *vetor, ARVORE* arv, ATRIBUTO **atributos){
             }
 
         }
-        if (id1 != arv->id_atributo){
-            arv->id_atributo = id1;
-            free(arv->filhos);
-            // printf("Volta\n");
-            arv->filhos =(ARVORE**) malloc(sizeof(ARVORE*) * atributos[id1]->numero_de_valor_distinto);
+        // if (id1 != arv->id_atributo){
+        //     arv->id_atributo = id1;
+        //     free(arv->filhos);
+        //     // printf("Volta\n");
+        //     arv->filhos =(ARVORE**) malloc(sizeof(ARVORE*) * atributos[id1]->numero_de_valor_distinto);
                 
-            for (int i=0; i< atributos[id1]->numero_de_valor_distinto;i++ ){
-                arv->filhos[i] = criar_arvore(atributos);
-            }
-            continue;
-        }
+        //     for (int i=0; i< atributos[id1]->numero_de_valor_distinto;i++ ){
+        //         arv->filhos[i] = criar_arvore(atributos);
+        //     }
+        //     continue;
+        // }
         arv->contador_de_elementos ++;
         // adicionando elemento no contador
         int label = vetor[NUMERO_ATRIBUTO];
@@ -265,7 +281,7 @@ int predicao(int *vetor, ARVORE * arv, ATRIBUTO ** atributos){
      return id;
   
   }
-
+  
 int calcula_memoria(ARVORE *arv,ATRIBUTO** atributos){
     int somatorio = sizeof(ARVORE);
     if (arv->id_atributo == -1){
@@ -274,13 +290,7 @@ int calcula_memoria(ARVORE *arv,ATRIBUTO** atributos){
         }
     }
     else{
-        for(int j = 0; j < NUMERO_ATRIBUTO; j++){
-            somatorio+= arv->contador[j]->tamanho*sizeof(int);
-            // printf("%d\n", somatorio);
-        }
         for(int j=0; j < atributos[arv->id_atributo]->numero_de_valor_distinto;j++){
-            if (arv->id_atributo == -1){
-            }
             somatorio += calcula_memoria(arv->filhos[j], atributos);
         }
 
