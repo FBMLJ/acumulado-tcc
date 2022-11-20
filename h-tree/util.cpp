@@ -21,60 +21,60 @@ ATRIBUTO** criar_instancia_de_atributos(){
     for (int i =0;i < 24;i++) vetor1[i] = i;
     vetor[0]->vetor = vetor1;
     // day
-    vetor[1]->numero_de_valor_distinto = 32;
-    int* vetor0 =(int*) malloc(sizeof(int)*32);
-    for (int i =0;i < 32;i++) vetor1[i] = i;
-    vetor[1]->vetor = vetor1;
+    // vetor[1]->numero_de_valor_distinto = 32;
+    // int* vetor0 =(int*) malloc(sizeof(int)*32);
+    // for (int i =0;i < 32;i++) vetor1[i] = i;
+    // vetor[1]->vetor = vetor1;
     // mes
-    vetor[2]->numero_de_valor_distinto = 12;
+    vetor[1]->numero_de_valor_distinto = 12;
     int* vetor2 =(int*) malloc(sizeof(int)*12);
     for (int i =0;i < 12;i++) vetor2[i] = i+1;
-    vetor[2]->vetor = vetor2;
+    vetor[1]->vetor = vetor2;
 
     // semana
-    vetor[3]->numero_de_valor_distinto = 7;
+    vetor[2]->numero_de_valor_distinto = 7;
     int* vetor3 =(int*) malloc(sizeof(int)*7);
     for (int i =0;i < 7;i++) vetor3[i] = i;
-    vetor[3]->vetor = vetor3;
+    vetor[2]->vetor = vetor3;
 
     
     // ano
-    vetor[4]->numero_de_valor_distinto = 14;
+    vetor[3]->numero_de_valor_distinto = 14;
     int* vetor4 =(int*) malloc(sizeof(int)*14);
     for (int i =0;i < 14;i++) vetor4[i] = 2004+i;
-    vetor[4]->vetor = vetor4;
+    vetor[3]->vetor = vetor4;
 
-    vetor[5]->numero_de_valor_distinto = NUM_LABEL;
-    int* vetor5 =(int*) malloc(sizeof(int)*NUM_LABEL);
-    for (int i =0;i < NUM_LABEL;i++) vetor5[i] = i;
-    vetor[5]->vetor = vetor5;
-
-    
-    vetor[6]->numero_de_valor_distinto = NUM_LABEL;
-    int* vetor6 =(int*) malloc(sizeof(int)*NUM_LABEL);
-    for (int i =0;i < NUM_LABEL;i++) vetor6[i] = i;
-    vetor[6]->vetor = vetor6;
+    // vetor[5]->numero_de_valor_distinto = NUM_LABEL;
+    // int* vetor5 =(int*) malloc(sizeof(int)*NUM_LABEL);
+    // for (int i =0;i < NUM_LABEL;i++) vetor5[i] = i;
+    // vetor[5]->vetor = vetor5;
 
     
-    vetor[7]->numero_de_valor_distinto = NUM_LABEL;
-    int* vetor7 =(int*) malloc(sizeof(int)*NUM_LABEL);
-    for (int i =0;i < NUM_LABEL;i++) vetor7[i] = i;
-    vetor[7]->vetor = vetor7;
+    // vetor[6]->numero_de_valor_distinto = NUM_LABEL;
+    // int* vetor6 =(int*) malloc(sizeof(int)*NUM_LABEL);
+    // for (int i =0;i < NUM_LABEL;i++) vetor6[i] = i;
+    // vetor[6]->vetor = vetor6;
 
-     vetor[8]->numero_de_valor_distinto = NUM_LABEL;
-    int* vetor8 =(int*) malloc(sizeof(int)*NUM_LABEL);
-    for (int i =0;i < NUM_LABEL;i++) vetor8[i] = i;
-    vetor[8]->vetor = vetor8;
+    
+    // vetor[7]->numero_de_valor_distinto = NUM_LABEL;
+    // int* vetor7 =(int*) malloc(sizeof(int)*NUM_LABEL);
+    // for (int i =0;i < NUM_LABEL;i++) vetor7[i] = i;
+    // vetor[7]->vetor = vetor7;
 
-    vetor[9]->numero_de_valor_distinto = NUM_LABEL;
-    int* vetor9 =(int*) malloc(sizeof(int)*NUM_LABEL);
-    for (int i =0;i < NUM_LABEL;i++) vetor9[i] = i;
-    vetor[9]->vetor = vetor9;
+    //  vetor[8]->numero_de_valor_distinto = NUM_LABEL;
+    // int* vetor8 =(int*) malloc(sizeof(int)*NUM_LABEL);
+    // for (int i =0;i < NUM_LABEL;i++) vetor8[i] = i;
+    // vetor[8]->vetor = vetor8;
 
-    vetor[10]->numero_de_valor_distinto = NUM_LABEL;
-    int* vetor10 =(int*) malloc(sizeof(int)*NUM_LABEL);
-    for (int i =0;i < NUM_LABEL;i++) vetor10[i] = i;
-    vetor[10]->vetor = vetor10;
+    // vetor[9]->numero_de_valor_distinto = NUM_LABEL;
+    // int* vetor9 =(int*) malloc(sizeof(int)*NUM_LABEL);
+    // for (int i =0;i < NUM_LABEL;i++) vetor9[i] = i;
+    // vetor[9]->vetor = vetor9;
+
+    // vetor[10]->numero_de_valor_distinto = NUM_LABEL;
+    // int* vetor10 =(int*) malloc(sizeof(int)*NUM_LABEL);
+    // for (int i =0;i < NUM_LABEL;i++) vetor10[i] = i;
+    // vetor[10]->vetor = vetor10;
 
 
 
@@ -240,10 +240,10 @@ void adiciona_na_arvore(int *vetor, ARVORE* arv, ATRIBUTO **atributos){
     float dif = maior1 -maior2;
     // realiza a divisão
     if (dif != 0 && dif> calcula_limite(arv->contador_de_elementos) && (id2 !=-1)){
-        // printf("dividi %d  %d\n",arv->contador_de_elementos,id1);
+        printf("dividi %d\n",id1);
         arv->id_atributo = id1;
         arv->filhos =(ARVORE**) malloc(sizeof(ARVORE*) * atributos[id1]->numero_de_valor_distinto);
-                
+        arv->num_de_filhos = atributos[id1]->numero_de_valor_distinto;
         for (int i=0; i< atributos[id1]->numero_de_valor_distinto;i++ ){
             arv->filhos[i] = criar_arvore(atributos);
         }
@@ -286,6 +286,7 @@ int calcula_memoria(ARVORE *arv,ATRIBUTO** atributos){
     int somatorio = sizeof(ARVORE);
     if (arv->id_atributo == -1){
         for(int j = 0; j < NUMERO_ATRIBUTO; j++){
+            // somatorio+= sizeof(CONTADOR);
             somatorio+= arv->contador[j]->tamanho*sizeof(int);
         }
     }

@@ -55,20 +55,13 @@ void loop() {
         temp += payload[controlador];
         controlador++;
        }
-//       Serial.println(vetor[0]);
-//       Serial.println(vetor[1]);
-//       Serial.println(vetor[2]);
-//       Serial.println(vetor[3]);
-//       Serial.println(vetor[4]);
-//       Serial.println(contador);
-//       Serial.println("---");
+
        int valor_previsto = predict(vetor,arv,atributos);
-//       Serial.print(vetor[4]);
+
       Serial.print(valor_previsto);
        Serial.print(" , ");
        Serial.println(vetor[4]);
-//       Serial.print(" , ");
-//       Serial.println(vetor[4] == valor_previsto);
+
        adiciona_na_arvore(vetor,arv,atributos);
        free(vetor);
       http.end();

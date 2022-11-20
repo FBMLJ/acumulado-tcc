@@ -1,4 +1,4 @@
-#define NUMERO_ATRIBUTO 5
+#define NUMERO_ATRIBUTO 11
 typedef struct atributo
 {
     int numero_de_valor_distinto;

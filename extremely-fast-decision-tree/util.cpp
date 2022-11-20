@@ -44,22 +44,40 @@ ATRIBUTO** criar_instancia_de_atributos(){
     for (int i =0;i < 14;i++) vetor4[i] = 2004+i;
     vetor[4]->vetor = vetor4;
 
-    // vetor[5]->numero_de_valor_distinto = NUM_LABEL;
-    // int* vetor5 =(int*) malloc(sizeof(int)*NUM_LABEL);
-    // for (int i =0;i < NUM_LABEL;i++) vetor5[i] = i;
-    // vetor[5]->vetor = vetor5;
+    vetor[5]->numero_de_valor_distinto = NUM_LABEL;
+    int* vetor5 =(int*) malloc(sizeof(int)*NUM_LABEL);
+    for (int i =0;i < NUM_LABEL;i++) vetor5[i] = i;
+    vetor[5]->vetor = vetor5;
 
     
-    // vetor[6]->numero_de_valor_distinto = NUM_LABEL;
-    // int* vetor6 =(int*) malloc(sizeof(int)*NUM_LABEL);
-    // for (int i =0;i < NUM_LABEL;i++) vetor6[i] = i;
-    // vetor[6]->vetor = vetor6;
+    vetor[6]->numero_de_valor_distinto = NUM_LABEL;
+    int* vetor6 =(int*) malloc(sizeof(int)*NUM_LABEL);
+    for (int i =0;i < NUM_LABEL;i++) vetor6[i] = i;
+    vetor[6]->vetor = vetor6;
 
     
-    // vetor[7]->numero_de_valor_distinto = NUM_LABEL;
-    // int* vetor7 =(int*) malloc(sizeof(int)*NUM_LABEL);
-    // for (int i =0;i < NUM_LABEL;i++) vetor7[i] = i;
-    // vetor[7]->vetor = vetor7;
+    vetor[7]->numero_de_valor_distinto = NUM_LABEL;
+    int* vetor7 =(int*) malloc(sizeof(int)*NUM_LABEL);
+    for (int i =0;i < NUM_LABEL;i++) vetor7[i] = i;
+    vetor[7]->vetor = vetor7;
+
+     vetor[8]->numero_de_valor_distinto = NUM_LABEL;
+    int* vetor8 =(int*) malloc(sizeof(int)*NUM_LABEL);
+    for (int i =0;i < NUM_LABEL;i++) vetor8[i] = i;
+    vetor[8]->vetor = vetor8;
+
+    vetor[9]->numero_de_valor_distinto = NUM_LABEL;
+    int* vetor9 =(int*) malloc(sizeof(int)*NUM_LABEL);
+    for (int i =0;i < NUM_LABEL;i++) vetor9[i] = i;
+    vetor[9]->vetor = vetor9;
+
+    vetor[10]->numero_de_valor_distinto = NUM_LABEL;
+    int* vetor10 =(int*) malloc(sizeof(int)*NUM_LABEL);
+    for (int i =0;i < NUM_LABEL;i++) vetor10[i] = i;
+    vetor[10]->vetor = vetor10;
+
+
+
 
 
    
